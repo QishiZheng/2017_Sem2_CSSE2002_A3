@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Light.Distant?>
+<?import javafx.scene.effect.Lighting?>
+<?import javafx.scene.effect.Shadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="assignment3.Controller">
+   <children>
+      <SplitPane dividerPositions="0.42384769539078154" prefHeight="700.0" prefWidth="1000.0">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+               <children>
+                  <Label alignment="TOP_CENTER" layoutX="34.0" prefHeight="39.0" prefWidth="311.0" text="Character Editor" textAlignment="CENTER">
+                     <font>
+                        <Font name="System Bold" size="36.0" />
+                     </font>
+                  </Label>
+                  <Button id="btnLoad" fx:id="btnLoad" layoutX="10.0" layoutY="61.0" mnemonicParsing="false" text="Load" />
+                  <Button id="btnSave" fx:id="btnSave" layoutX="72.0" layoutY="61.0" mnemonicParsing="false" text="Save" />
+                  <Label layoutX="11.0" layoutY="34.0" prefHeight="27.0" prefWidth="140.0" text="Load/Save Database">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="223.0" layoutY="39.0" text="Create a new DB">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <TextField id="TextBoxFileName" fx:id="TextBoxFileName" layoutX="223.0" layoutY="61.0" opacity="0.66" prefHeight="27.0" prefWidth="127.0" promptText="Enter a file name..." />
+                  <ListView id="charList" fx:id="charList" editable="true" layoutX="7.0" layoutY="177.0" prefHeight="366.0" prefWidth="311.0" />
+                  <Label layoutX="12.0" layoutY="140.0" prefHeight="27.0" prefWidth="154.0" text="All Characters in DB">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                  </Label>
+                  <Button id="btnDeleteChar" fx:id="btnDeleteChar" layoutX="326.0" layoutY="177.0" mnemonicParsing="false" prefHeight="63.0" prefWidth="73.0" style="-fx-background-color: Red;" text="Delete Selected" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+                     <effect>
+                        <Lighting diffuseConstant="2.0" specularConstant="1.13" specularExponent="18.1" surfaceScale="2.33">
+                           <bumpInput>
+                              <Shadow color="#4a2929" height="24.03" width="17.97" />
+                           </bumpInput>
+                           <light>
+                              <Light.Distant />
+                           </light>
+                        </Lighting>
+                     </effect>
+                  </Button>
+                  <Button id="btnSearchChar" fx:id="btnSearchChar" layoutX="354.0" layoutY="140.0" mnemonicParsing="false" text="Search" />
+                  <TextField id="TextBoxCharName" fx:id="TextBoxCharName" layoutX="187.0" layoutY="140.0" opacity="0.7" prefHeight="27.0" prefWidth="163.0" promptText="A Character name for searching...">
+                     <font>
+                        <Font size="10.0" />
+                     </font>
+                  </TextField>
+                  <Label layoutX="4.0" layoutY="556.0" prefHeight="18.0" prefWidth="170.0" text="Create a new Character">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <TextField id="TextBoxCreateCharName" fx:id="TextBoxCreateCharName" layoutX="11.0" layoutY="598.0" opacity="0.77" prefHeight="29.0" prefWidth="184.0" promptText="Please enter a character name...">
+                     <font>
+                        <Font size="10.0" />
+                     </font>
+                  </TextField>
+                  <Button id="btnCreateNChar" fx:id="btnCreateNChar" layoutX="222.0" layoutY="570.0" mnemonicParsing="false" prefHeight="22.0" prefWidth="163.0" text="Create A Normal Character">
+                     <font>
+                        <Font size="11.0" />
+                     </font>
+                  </Button>
+                  <Button id="btnCreateSChar" fx:id="btnCreateSChar" layoutX="222.0" layoutY="602.0" mnemonicParsing="false" prefWidth="163.0" text="Create A Super Character!!!">
+                     <font>
+                        <Font size="11.0" />
+                     </font>
+                  </Button>
+                  <Button id="btnCreateFile" fx:id="btnCreateFile" layoutX="355.0" layoutY="61.0" mnemonicParsing="false" text="Create" />
+                  <Label layoutX="10.0" layoutY="581.0" text="Name" />
+                  <Label layoutX="11.0" layoutY="634.0" text="Description" />
+                  <TextField id="TextBoxCreateCharDesc" fx:id="TextBoxCreateCharDesc" layoutX="13.0" layoutY="651.0" prefHeight="36.0" prefWidth="184.0" promptText="Please enter character decription...">
+                     <font>
+                        <Font size="10.0" />
+                     </font>
+                  </TextField>
+                  <Label layoutX="222.0" layoutY="626.0" text="Power Level" />
+                  <TextField id="TextBoxCreateCharPwrLevel" fx:id="TextBoxCreateCharPwrLevel" layoutX="210.0" layoutY="651.0" prefHeight="36.0" prefWidth="201.0" promptText="Enter a power level (1-10) for Super Character">
+                     <font>
+                        <Font size="9.0" />
+                     </font>
+                  </TextField>
+               </children>
+            </AnchorPane>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+               <children>
+                  <ImageView id="charImg" fx:id="charImg" fitHeight="150.0" fitWidth="200.0" layoutX="14.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                     <effect>
+                        <Shadow color="#797272eb" height="12.14" radius="4.8125" width="9.11" />
+                     </effect>
+                     <image>
+                        <Image url="@../images/default.png" />
+                     </image>
+                  </ImageView>
+                  <Button id="btnChangeImg" fx:id="btnChangeImg" layoutX="36.0" layoutY="174.0" mnemonicParsing="false" text="Change Image" />
+                  <Label id="labelCharName" fx:id="labelCharName" alignment="CENTER" layoutX="228.0" layoutY="11.0" prefHeight="63.0" prefWidth="287.0" text="&lt;Character Name&gt;">
+                     <font>
+                        <Font name="System Bold Italic" size="28.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="14.0" layoutY="231.0" text="Description: ">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="12.0" layoutY="373.0" text="Traits:">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="11.0" layoutY="479.0" text="Power Level: ">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="14.0" layoutY="512.0" text="Super Powers:">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+                  <TextField id="charDesc" fx:id="charDesc" alignment="TOP_LEFT" layoutX="124.0" layoutY="238.0" prefHeight="86.0" prefWidth="343.0" promptText="Character Description...">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </TextField>
+                  <TextField id="charTraits" fx:id="charTraits" alignment="TOP_LEFT" layoutX="124.0" layoutY="332.0" prefHeight="137.0" prefWidth="343.0" promptText="Trait 1">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </TextField>
+                  <TextField id="charPowerLevel" fx:id="charPowerLevel" layoutX="124.0" layoutY="476.0" prefHeight="27.0" prefWidth="343.0" promptText="Enter a power level between 1 and 10" />
+                  <TextField id="charSuperPowers" fx:id="charSuperPowers" layoutX="129.0" layoutY="509.0" prefHeight="138.0" prefWidth="343.0" promptText="Super Powers..." />
+                  <Button id="btnUpdateChar" fx:id="btnUpdateChar" layoutX="213.0" layoutY="653.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="159.0" text="Update Character">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Button>
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+   </children>
+</AnchorPane>
