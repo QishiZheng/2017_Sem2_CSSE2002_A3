@@ -183,6 +183,14 @@ public class SuperCharacter extends Character {
 		}
 		return true;
 	}
+	
+	/**
+	 * 
+	 * @return	Returns aa copy of the powers Set.
+	 */
+	public Set<String> getPowers(){
+		return new HashSet<String>(powers);
+	}
 
 	@Override
     public Object clone() {

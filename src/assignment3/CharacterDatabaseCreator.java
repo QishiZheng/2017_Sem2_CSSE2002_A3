@@ -41,6 +41,7 @@ public class CharacterDatabaseCreator {
 		database.add(borks);
 		
 		database.save();
+		System.out.println(database);
 	}
 	
 	public static void exampleDatabaseUpdate() {

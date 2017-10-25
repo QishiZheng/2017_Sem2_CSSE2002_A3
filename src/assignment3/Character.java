@@ -194,6 +194,14 @@ public class Character implements Serializable {
 	public int hashCode() {
 		return name.hashCode();
 	}
+	
+	/**
+	 * 
+	 * @return	Returns a copy of the traits Set.
+	 */
+	public Set<String> getTraits(){
+		return new HashSet<String>(traits);
+	}
 
 	@Override
 	public Object clone() {
